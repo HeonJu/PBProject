@@ -46,7 +46,7 @@ List<PBVO> list = (List<PBVO>)request.getAttribute("list");
 
       <!-- 행 -->
       <thead>
-         <tr style="background-color=lightgray;">
+         <tr style="background-color:lightgray;">
             <th>이름</th>
             <th>휴대전화</th>
             <th>전화번호</th>
@@ -66,15 +66,7 @@ List<PBVO> list = (List<PBVO>)request.getAttribute("list");
 			<td><input type="submit" value="삭제" /></td>
 		<% } %>
 		
-         
-            
-            
-           
-          
-            
-             
-           
-               
+       
           
          </tr>
       </tbody>
