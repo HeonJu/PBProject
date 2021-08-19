@@ -43,7 +43,7 @@ List<PBVO> list = (List<PBVO>)request.getAttribute("list");
 	
 	
 <table border="1">
-  <% for (PBVO vo: list) { %>
+
       <!-- 행 -->
       <thead>
          <tr style="background-color=lightgray;">
@@ -57,30 +57,29 @@ List<PBVO> list = (List<PBVO>)request.getAttribute("list");
       
       	
       <tbody>
-    
+    <% for (PBVO vo: list) { %>
          <tr>
-
-			<td><%= vo.getName() %></td>
+  
+			<td><%= vo.getName()%></td>
 			<td><%= vo.getHp() %></td>
 			<td><%= vo.getTel() %></td>  
+			<td><input type="submit" value="삭제" /></td>
+		<% } %>
 		
-		
-            <td colspan="2">
+         
             
             
-            <!-- 삭제 폼 -->
-               <form action=""
-                  method="POST">
-                  <input type="submit" value="삭제" />
-               </form>
+           
+          
+            
+             
+           
                
-               
-               
-            </td>
+          
          </tr>
       </tbody>
    </table>
-	<% } %>
+	
 	
 	
   <a href="<%= request.getContextPath() %>/address/add.jsp">새 주소 추가</a>
