@@ -43,7 +43,7 @@ List<PBVO> list = (List<PBVO>)request.getAttribute("list");
 	
 	
 <table border="1">
-
+  <% for (PBVO vo: list) { %>
       <!-- 행 -->
       <thead>
          <tr style="background-color=lightgray;">
@@ -53,23 +53,18 @@ List<PBVO> list = (List<PBVO>)request.getAttribute("list");
             <th>도구</th>
          </tr>
       </thead>
-      	  <% for (PBVO vo: list) { %>
+      	
       
       	
       <tbody>
     
          <tr>
 
-		
-		
 			<td><%= vo.getName() %></td>
 			<td><%= vo.getHp() %></td>
 			<td><%= vo.getTel() %></td>  
 		
-			
 		
-		
-            
             <td colspan="2">
             
             
